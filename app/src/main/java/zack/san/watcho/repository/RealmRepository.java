@@ -17,7 +17,6 @@ public class RealmRepository {
         this.realm = Realm.getDefaultInstance();
     }
 
-
     private int getNextUserId() {
         Number maxId = realm.where(User.class).max("userId");
         return maxId == null ? 1 : maxId.intValue() + 1;
@@ -26,7 +25,7 @@ public class RealmRepository {
     public void saveUser(final User user) {
 
 
-        user.setUserId(getNextUserId());
+       // user.setUserId(getNextUserId());
         realm.executeTransaction(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {

@@ -19,27 +19,20 @@ public class MyApplication extends Application {
         Realm.init(this);
 
 
-       /* RealmConfiguration config = new RealmConfiguration.Builder()
-                .schemaVersion(2)
-                .migration(new MyRealmMigration()) // set the migration object
-                .build();
-        Realm.setDefaultConfiguration(config);*/
-
-
         RealmConfiguration config = new RealmConfiguration.Builder()
+                .allowWritesOnUiThread(true)
                 .deleteRealmIfMigrationNeeded()
                 .build();
         Realm.setDefaultConfiguration(config);
-        Realm realm = Realm.getDefaultInstance();
-        RealmRepository repository = new RealmRepository();
-        //Insert
+       // Realm realm = Realm.getDefaultInstance();
         User user = new User("isaac","pass");
-        repository.saveUser(user);
-        /*
-        realm.beginTransaction();
-        User user = realm.createObject(User.class);
-        user.setUsername("isaac");
-        user.setPassword("pass");*/
+/*
+
+//        //Insert
+//        realm.beginTransaction();
+//        User user = realm.createObject(User.class,1);
+//        user.setUsername("isaac");
+//        user.setPassword("pass");
 
 
         //insert
@@ -62,8 +55,18 @@ public class MyApplication extends Application {
         }
 
         realm.commitTransaction();
+        realm.close();*/
+
+        RealmRepository  repository = new RealmRepository();
+
+
+
 
     }
+
+
+
+
 
 
 }

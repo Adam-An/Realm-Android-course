@@ -85,7 +85,7 @@ public class ProfileFragment extends Fragment {
         username1 = v.findViewById(R.id.heroProfileName);
         password1 = v.findViewById(R.id.heroProfileDescription);
         username1.setText(user.getUsername());
-        password1.setText(user.getUserId());
+        password1.setText(String.valueOf(user.getUserId()));
 
         return v;
 
