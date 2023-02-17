@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userProfileImg"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/gto"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/scode_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/userProfileImg"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/heroProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User name"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/userProfileImg"
+            />
+        <TextView
+            android:id="@+id/heroProfileDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Saitama (サイタマ, Saitama) is the main protagonist of the series and the titular One-Punch Man. He is currently the most powerful being to exist in the series. Saitama faces a self-imposed existential crisis, as he is now too powerful to gain any thrill from battle."
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/heroProfileName"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/editHero"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/heroProfileDescription"
+            android:text="Edit profile"/>
+
+
+    </RelativeLayout>
+    <!-- TODO: Update blank fragment layout -->
+
+
+</FrameLayout>

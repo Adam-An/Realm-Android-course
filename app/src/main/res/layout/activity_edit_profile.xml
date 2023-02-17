@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfile">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userProfileImg"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/gto"
+        android:layout_marginTop="20dp"/>
+
+
+
+    <TextView
+        android:id="@+id/userText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit UserName"
+        android:layout_centerHorizontal="false"
+        android:layout_below="@id/userProfileImg"
+        />
+
+    <EditText
+        android:id="@+id/EditUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="username"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/userText"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/passwordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Password"
+        android:layout_centerHorizontal="false"
+        android:layout_below="@id/EditUsername"
+        />
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="passowrd"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/passwordText"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/editUser"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/editPassword"
+        android:text="save"/>
+    <Button
+        android:id="@+id/cancelEdit"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/editUser"
+        android:text="cancel"/>
+
+</RelativeLayout>
