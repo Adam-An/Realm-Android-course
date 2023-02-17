@@ -25,17 +25,7 @@ public class MyApplication extends Application {
                 .build();
         Realm.setDefaultConfiguration(config);
        // Realm realm = Realm.getDefaultInstance();
-        User user = new User("isaac","pass");
-/*
-
-//        //Insert
-//        realm.beginTransaction();
-//        User user = realm.createObject(User.class,1);
-//        user.setUsername("isaac");
-//        user.setPassword("pass");
-
-
-        //insert
+        User user = new User("vekki","pass");
         ArrayList<Anime> animeArrayList = new ArrayList<Anime>();
         animeArrayList.add(new Anime("One Punch Man", 24, "https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/d8eed44e3d48097ab5fd36b6815fc18e.jpe"));
         animeArrayList.add(new Anime("Great Teacher Onizuka",  43,"https://upload.wikimedia.org/wikipedia/en/b/b9/GTO_volume_1.jpg"));
@@ -46,6 +36,18 @@ public class MyApplication extends Application {
         animeArrayList.add(new Anime("Fullmetal Alchemist", 27, "https://image.myanimelist.net/ui/2WKqUufwTqFEmbnAXxxIeLHjalfqphl2Trm-pNsdMAGJW7bM3aUxCQkTceY86CX1sXBe_xB_2gaircB1lDTPG_6CqWbiUwKauKozKnKopT3Yg52OblsZSxwphQcvArup"));
         animeArrayList.add(new Anime("One Piece", 1000, "https://comicvine.gamespot.com/a/uploads/scale_small/11161/111610434/8594314-9160985681-97840.jpg"));
         animeArrayList.add(new Anime("Demon Slayer", 23, "https://demonslayer-anime.com/risshihen/assets/img/top/img_main_sp.jpg"));
+
+
+/*
+
+//        //Insert
+//        realm.beginTransaction();
+//        User user = realm.createObject(User.class,1);
+//        user.setUsername("isaac");
+//        user.setPassword("pass");
+
+
+        //insert
 
         for (Anime anime : animeArrayList) {
             Anime animeRealm = realm.createObject(Anime.class);
@@ -58,6 +60,8 @@ public class MyApplication extends Application {
         realm.close();*/
 
         RealmRepository  repository = new RealmRepository();
+        repository.saveUser(user);
+        repository.saveAnimeList(animeArrayList);
 
 
 

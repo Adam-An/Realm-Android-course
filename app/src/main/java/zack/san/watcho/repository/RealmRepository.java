@@ -1,6 +1,7 @@
 package zack.san.watcho.repository;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
@@ -25,7 +26,7 @@ public class RealmRepository {
     public void saveUser(final User user) {
 
 
-       // user.setUserId(getNextUserId());
+        user.setUserId(getNextUserId());
         realm.executeTransaction(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
@@ -63,6 +64,13 @@ public class RealmRepository {
         return realm.where(Anime.class).findAll();
     }
 
-
+    public void saveAnimeList(List<Anime> animeList) {
+        realm.executeTransaction(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                realm.copyToRealmOrUpdate(animeList);
+            }
+        });
+    }
 
 }
