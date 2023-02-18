@@ -38,6 +38,8 @@ public class MyApplication extends Application {
         animeArrayList.add(new Anime("Demon Slayer", 23, "https://demonslayer-anime.com/risshihen/assets/img/top/img_main_sp.jpg"));
 
 
+
+
 /*
 
 //        //Insert
@@ -59,7 +61,10 @@ public class MyApplication extends Application {
         realm.commitTransaction();
         realm.close();*/
 
+
+
         RealmRepository  repository = new RealmRepository();
+        repository.DeleteAll();
         repository.saveUser(user);
         repository.saveAnimeList(animeArrayList);
 

@@ -23,6 +23,16 @@ public class RealmRepository {
         return maxId == null ? 1 : maxId.intValue() + 1;
     }
 
+
+    public void DeleteAll(){
+        realm.executeTransaction(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                realm.deleteAll();
+            }
+        });
+    }
+
     public void saveUser(final User user) {
 
 
